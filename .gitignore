@@ -43,3 +43,6 @@ Temporary Items
 .apdisk
 followers.txt
 instagram.txt
+dist
+build
+setup.py
