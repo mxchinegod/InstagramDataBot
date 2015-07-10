@@ -1,0 +1,34 @@
+import urllib2
+import datetime
+import time
+import os
+
+def init():
+    username = raw_input("What is your instagram username?\n")
+    if len(username) < 1:
+        print "Not a valid username."
+    else:
+        interval = raw_input("How often would you like to record(in seconds)?\n")
+        if int(interval) < 60:
+            opt = raw_input("That is very fast. You may experience decreased bandwidth on your network, continue? [Y/N]:\n")
+            if opt == ("Y"):
+                print "Finished first export. Sleeping for " + interval + " seconds.\n"
+                while True:
+                    data = file(os.path.dirname(os.path.realpath(__file__)) + "instagram.txt", "w").write(urllib2.urlopen("http://www.instagram.com/" + username).read())
+                    followers = str("followed_by\":{\"count\":")
+                    search = open(os.path.dirname(os.path.realpath(__file__)) + "instagram.txt","r")
+                    for line in search.readlines():
+                            if followers in line:
+                                print line
+                                print line.index(followers)
+                                follows = line[363],line[364],line[365],line[366]
+                                number = ''.join(str(x) for x in follows)
+                                documentprint = str((number, ":", datetime.datetime.now(),))
+                                chars_to_remove = ['(','\'',',','datetime.datetime',')']
+                                documentprint = documentprint.translate(None, ''.join(chars_to_remove))
+                                
+                    file(os.path.dirname(os.path.realpath(__file__)) + "followers.txt", "w").write(documentprint + "\n")
+                    time.sleep(int(interval))
+            else:
+                init()
+init()
