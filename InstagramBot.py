@@ -3,6 +3,10 @@ import datetime
 import time
 import os
 
+# There is an issue because the loops both contain the file writing.
+# so every time the loop reiterates, the files are overwritten.
+# It's an easy fix but spend time with family for tonight. 7/10/2015
+
 def init():
     username = raw_input("What is your instagram username?\n")
     if len(username) < 1:
