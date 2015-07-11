@@ -1,5 +1,5 @@
 # InstagramDataBot
-I wrote a script that miserably hacks the instagram page of a user and parses data after cleaning it up and using lists. I will come up with a better way to do it but Instagram really does not want bots scraping their site, I've found out. This records follower count specifically without using the Instagram API. This makes it ridiculously easy to gather important info quickly for an up-and-coming brand. The only issue is that one would need to find the index for the follower count whereas the one I hardcoded is for a specific account. A different name would alter the code on the page. 
+I wrote a script that miserably hacks the instagram page of a user and parses data after cleaning it up and using lists. I will come up with a better way to do it but Instagram really does not want bots scraping their site, I've found out. This records follower count specifically without using the Instagram API. This makes it ridiculously easy to gather important info quickly for an up-and-coming brand. The only issue is that one would need to find the index for the follower count whereas the one I hardcoded is for a specific account page. A different name would alter the code on the page and move the index of the follower count. 
 
 
     follows = line[363],line[364],line[365],line[366]
