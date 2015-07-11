@@ -1,5 +1,5 @@
 # InstagramDataBot
-I wrote a script that miserably hacks the instagram page of a user and parses data after cleaning it up and using lists. I will come up with a better way to do it but Instagram really does not want bots scraping their site, I've found out. 
+I wrote a script that miserably hacks the instagram page of a user and parses data after cleaning it up and using lists. I will come up with a better way to do it but Instagram really does not want bots scraping their site, I've found out. This records follower count specifically without using the Instagram API. This makes it ridiculously easy to gather important info quickly for an up-and-coming brand.
 
 # Use
 This is for gathering data about how many followers you gain in a certain period. Over time I may add more features but probably only if I find a better way to do this (there is one).
