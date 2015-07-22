@@ -1,4 +1,5 @@
-<imgr src="http://i.imgur.com/e3Ssc5m.png"><br>
+<img src="http://i.imgur.com/e3Ssc5m.png"><br>
+
 # InstagramDataBot
 I wrote a script that miserably hacks the instagram page of a user and parses data after cleaning it up and using lists. I will come up with a better way to do it but Instagram really does not want bots scraping their site, I've found out. This records follower count specifically without using the Instagram API. This makes it ridiculously easy to gather important info quickly for an up-and-coming brand. 
 
