@@ -22,7 +22,7 @@ def init():
                             if followers in line:
                                 print line
                                 print line.index(followers)
-                                follows = line[363],line[364],line[365],line[366]
+                                follows = line[line.index(followers) + 22],line[line.index(followers) + 23],line[line.index(followers) + 24],line[line.index(followers) + 25]
                                 number = ''.join(str(x) for x in follows)
                                 documentprint = str((number, ":", datetime.datetime.now(),))
                                 chars_to_remove = ['(','\'',',','datetime.datetime',')']
@@ -42,7 +42,7 @@ def init():
                         if followers in line:
                             print line
                             print line.index(followers)
-                            follows = line[363],line[364],line[365],line[366]
+                            follows = line[line.index(followers) + 22],line[line.index(followers) + 23],line[line.index(followers) + 24],line[line.index(followers) + 25]
                             number = ''.join(str(x) for x in follows)
                             documentprint = str((number, ":", datetime.datetime.now(),))
                             chars_to_remove = ['(','\'',',','datetime.datetime',')']
