@@ -14,7 +14,7 @@ def proc(interval,username):
                 if followers in line:
                     print line
                     print line.index(followers)
-                    follows = line[line.index(followers) + 22],line[line.index(followers) + 23],line[line.index(followers) + 24],line[line.index(followers) + 25]
+                    follows = line[line.index(followers) + 22],line[line.index(followers) + 23],line[line.index(followers) + 24],line[line.index(followers) + 25],line[line.index(followers) + 26]
                     number = ''.join(str(x) for x in follows)
                     documentprint = str((number, ":", datetime.datetime.now(),))
                     chars_to_remove = ['(','\'',',','datetime.datetime',')']
@@ -22,8 +22,7 @@ def proc(interval,username):
                     with open(os.path.dirname(os.path.realpath(__file__)) + "followers.txt", "a") as f:
                         f.write(documentprint + '\n')
                         time.sleep(int(interval))
-        except urllib2.HTTPError, err:
-            if err.code == 500:
+        except urllib2.HTTPError:
                 time.sleep(2000)
                 return()
 def prompt():
